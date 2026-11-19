@@ -1,24 +1,24 @@
 {
   "ai": {
-    "provider": "openai",
-    "model": "gpt-4o-mini",
-    "api_key_env": "OPENAI_API_KEY",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "api_key_env": "GOOGLE_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
-    "throttle_sec": 1,
+    "throttle_sec": 4.5,
     "languages": [
       "zh",
       "en"
     ],
-    "analysis_concurrency": 5,
-    "enrichment_concurrency": 5
+    "analysis_concurrency": 2,
+    "enrichment_concurrency": 2
   },
   "processing": {
     "profiles_dir": "profiles",
     "default_profile": "tech-news",
     "profile_settings": {
       "tech-news": {
-        "threshold": 7,
+        "threshold": 6.5,
         "topic_dedup": true
       },
       "tech-blog": {
@@ -26,7 +26,7 @@
         "topic_dedup": false
       },
       "finance-news": {
-        "threshold": 7,
+        "threshold": 6.5,
         "topic_dedup": true
       }
     }
